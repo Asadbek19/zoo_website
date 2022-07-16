@@ -1,0 +1,115 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+		{% block content %}
+
+
+				<div id="content">
+					<div id="featured">
+						<h2>Meet our Animals</h2>
+						<ul>
+							<li class="first">
+								<a href="gallery.html"><img src="{% static 'images/penguin.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Duis laoreet</a>
+							</li>
+							<li>
+								<a href="gallery.html"><img src="{% static 'images/elephant.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Curabitur</a>
+							</li>
+							<li>
+								<a href="gallery.html"><img src="{% static 'images/owl.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Adipiscing</a>
+							</li>
+							<li>
+								<a href="gallery.html"><img src="{% static 'images/butterfly.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Sed Volutpat</a>
+							</li>
+							<li>
+								<a href="gallery.html"><img src="{% static 'images/turtle.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Nulla lobortis</a>
+							</li>
+							<li>
+								<a href="gallery.html"><img src="{% static 'images/snake.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Suspendisse</a>
+							</li>
+							<li>
+								<a href="gallery.html"><img src="{% static 'images/gorilla.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Tincidunt</a>
+							</li>
+							<li class="last">
+								<a href="gallery.html"><img src="{% static 'images/button-view-gallery.jpg' %}" alt=""/></a>
+								<a href="gallery.html">Gallery</a>
+							</li>
+						</ul>
+					</div>
+					<div class="section1">
+						<h2>Events</h2>
+						<ul id="article">
+                            {% for i in event %}
+                                <li class="first">
+                                    <a href="#"><span>{{ i.timestamp }}</span></a>
+                                    <p>{{ i.text }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+					</div>
+					<div class="section2">
+						<h2>Blog : Curabitur sodales</h2>
+						<p>This website template has been designed by freewebsitetemplates.com for you, for free.</p>
+						<a href="#"><img src="{% static 'images/dolphins.jpg' %}" alt=""/></a>
+						<ul>
+							<li>
+								<p>This website template has been</p>
+							</li>
+							<li>
+								<p>designed By <a href="">Free Website Templates</a> for you, for free.</p>
+							</li>
+							<li>
+								<p>If you're having problems editing this website template,</p>
+							</li>
+							<li>
+								<p>then don't hesitate to ask for help on the <a href="">Forum</a>.</p>
+							</li>
+							<li>
+								<p>Duis a est eget nunc pretium laoreet</p>
+							</li>
+						</ul>
+						<div id="section1">
+							<ul>
+								<li>
+									<a href="#"><img src="{% static 'images/gorilla-2.jpg' %}" alt=""/></a>
+									<h4><a href="#">Malesuada fames turpis egestas</a></h4>
+									<p>QUisque lobortis, sem condimentum lacinia</p>
+								</li>
+								<li>
+									<a href="#"><img src="{% static 'images/snake-2.jpg' %}" alt=""/></a>
+									<h4><a href="#">Morbi eu lacus lorem, sed venenatis ligula</a></h4>
+									<p>Fusce eratenim, lacinia eget pretium vitae</p>
+								</li>
+							</ul>
+						</div>
+							<div id="section2">
+								<ul>
+									<li>
+										<a href="#"><img src="{% static 'images/butterfly-2.jpg' %}" alt=""/></a>
+										<h4><a href="#">This website template has been</a></h4>
+										<p>designed by <a href="">Free Website Templates</a> for you, for free.</p>
+									</li>
+								</ul>
+							</div>
+					</div>
+					<div class="section3">
+						<h2>Connect</h2>
+						<a href="#" id="email">Email Us</a>
+						<a href="http://facebook.com/" id="facebook">Facebook</a>
+						<a href="http://twitter.com/" id="twitter">Twitter</a>
+						<form action="">
+							<h3>Subscribe to our</h3>
+							<h2>NEWSLETTER</h2>
+							<input type="text" value="your email here..." onblur="this.value=!this.value?'your email here...':this.value;" onfocus="this.select()" onclick="this.value='';" />
+						</form>
+						<img src="{% static 'images/penguin2.jpg' %}" alt=""/>
+					</div>
+				</div>
+
+		{% endblock %}

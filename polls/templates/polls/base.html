@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <a href="{% url 'index' %}" id="logo"><img src="{% static 'images/logo.jpg' %}" alt=""/></a>
+                <ul>
+                    <li class="first">
+                        <h2><a href="{% url 'live' %}">Live</a></h2>
+                        <span>Have fun in your visit</span>
+                    </li>
+                    <li>
+                        <h2><a href="{% url 'live' %}">Love</a></h2>
+                        <span>Donate for the animals</span>
+                    </li>
+                    <li>
+                        <h2><a href="{% url 'live' %}">Learn</a></h2>
+                        <span>Get to know the animals</span>
+                    </li>
+                </ul>
+                <a href="tickets.html">Buy tickets / Check Events</a>
+                <ul id="navigation">
+                    <li id="link1" class="{{ selected_home }}"><a href="{% url 'index' %}">Home</a></li>
+                    <li id="link2" class="{{ selected_zoo }}"><a href="{% url 'zoo' %}">The Zoo</a></li>
+                    <li id="link3" class="{{ selected_info }}"><a href="{% url 'info' %}">Visitors Info</a></li>
+                    <li id="link4" class="{{ selected_tickets }}"><a href="{% url 'tickets' %}">Tickets</a></li>
+                    <li id="link5" class="{{ selected_events }}"><a href="{% url 'events' %}">Events</a></li>
+                    <li id="link6" class="{{ selected_gallery }}"><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li id="link7" class="{{ selected_contact }}"><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+                <img src="{% static 'images/lion-family.jpg' %}" alt="figure"/>
+
+        </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <div id="footer">
+				<div>
+					<a href="{% url 'index' %}" class="logo"><img src="{% static 'images/animal-kingdom.jpg' %}" alt=""/></a>
+					<div>
+						<p>Ellentesque habitant morbi tristique senectus et 0000</p>
+						<span>971 011-33 222 / 1 371 888 999</span>
+						<span>email@animalkingdomzoo.com</span>
+					</div>
+					<ul class="navigation">
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'tickets' %}">Tickets</a></li>
+						<li><a href="{% url 'zoo' %}">The Zoo</a></li>
+						<li><a href="{% url 'events' %}">Events</a></li>
+						<li><a href="{% url 'blog' %}">Blog</a></li>
+						<li><a href="{% url 'gallery' %}">Gallery</a></li>
+					</ul>
+					<ul>
+                        <li><a href="{% url 'live' %}">Live : Have fun in your visit</a></li>
+                        <li><a href="{% url 'live' %}">Love : Donate for the animals</a></li>
+                        <li><a href="{% url 'live' %}">Learn : Get to know the animals</a></li>
+					</ul>
+					<p>Copyright &#169; 2011. All Rights Reserved.</p>
+				</div>
+    </div>
+</div>
+</body>
+</html>
+
